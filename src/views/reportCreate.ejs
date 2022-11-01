@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node.js News</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script>
+        var productNamesArray = [];
+        var amazonArray = [];
+        var noonArray = [];
+    </script>
+</head>
+<body>
+    <header class="header">
+       
+      <!--  <%- include('./partials/search.ejs') %>  
+    </header>
+
+    <div class="wrapper">
+        <div class="reportCreate">
+            <% if(report1data != null) { %>
+                <h2>client name is <%- report1data.clientName %><h2/>
+                <h2>Date from is <%- report1data.dateFrom %><h2/>
+                <h2>Date to   is <%- report1data.dateTo %><h2/>
+                    <h3>
+                    <table border="1"> 
+                        <tr><th>product name</th><th>amazon</th><th>Noon</th><th>FBM</th><th>Facebook</th><th>Shopify</th><th>Last Mile</th><th>Cross dock</th></tr>
+                        <% report1data.products.forEach(function(product, index) { %>  
+                            <tr>
+                                <td> <%- product.productName %></td>
+                                <td> <%- product.Amazon %></td>
+                                <td> <%- product.Noon %></td>
+                                <td> <%- product.FBM %></td>
+                                <td> <%- product.FacebookMarketplace %></td>
+                                <td> <%- product.Shopify %></td>
+                                <td> <%- product.LastMile %></td>
+                                <td> <%- product.CrossDock %></td>
+                            </tr>
+                            <%  }) %> 
+                    </table>
+                    </h3>
+
+                    <div id="chart" border="1">
+                     
+                    </div>
+                    <script type="text/javascript">
+                    
+                        let ejsArray ='<%- JSON.stringify(report1data) %>';
+                        var obj = JSON.parse(ejsArray);
+        
+                        for (var i=0; i<obj.products.length ; i++){
+                              productNamesArray.push(obj.products[i].productName);
+                              amazonArray.push(obj.products[i].Amazon);
+                              noonArray.push(obj.products[i].LastMile);  
+                        }
+                        
+
+                        var trace1 = {
+                                x: productNamesArray,
+                                y: amazonArray,
+                                name: "Amazon",
+                                type: "bar"
+                                };
+                        var trace2 = {
+                                x: productNamesArray,
+                                y: noonArray,
+                                name: "Noon",
+                                type: "bar"
+                                };
+                        var data = [trace1, trace2];
+                        var layout = {barmode: "group"};
+
+                       
+                        Plotly.newPlot('chart', data, layout);
+                        
+                    </script>
+            <% } else { %>
+               <h1> No data found.</h1>
+            <% } %>
+        </div>
+    </div>  
+</body>
+</html> 

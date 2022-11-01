@@ -1,0 +1,23 @@
+1. Required Packages:
+
+(whastapp-web.js , qrcode-terminal,uuid)
+
+2.Go to the scripts (report1 & updateStatus) and replace the number with client number
+
+(Test the scripts seperately use one at a time comment the other)
+3. Test the Route on Postman using route (http://localhost:8000/api/report1/blank_zakaza) go back to your code cli and scan QR with your whatsapp
+4. Test the Route on Postman using route (http://localhost:8000/api/status/statusupdate) go back to your code cli and scan QR with your whatsapp
+
+These routes use the record_id: recVe1KFErZFnZBcM.You can replace it with query using  (var recordid = request.query.recordid; // $_GET["id"]) when you use the route with heroku app
+
+5. compile report1 with your PDF button (pass the query)
+6. compile updateStatus with your status handler (pass the query)
+
+7.Made change in pdf according to your requirement (we donot get all the feilds using this recordid:recVe1KFErZFnZBcM. 
+
+
+(At deployment time)
+On your Heroku App go to Settings > Buildpacks, and add: https://buildpack-registry.s3.amazonaws.com/buildpacks/jontewks/puppeteer.tgz
+OR
+Follow these steps:
+https://github.com/ameybhavsar24/ww-bot/blob/master/DEPLOY.md

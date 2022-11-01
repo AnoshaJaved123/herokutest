@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        table {
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        html {
+             zoom: 0.55;
+        }
+        body,
+      html {
+        font-family: arial, sans-serif;
+       
+        color: rgb(46, 46, 46);
+      }
+      p {
+        font-size: 20px;
+      }
+      .header {
+            padding: 60px;
+            text-align: left;
+            font-size: 15px;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <div class="header">
+               <p style="text-align:left"> <span style="font-weight: 1000; color: goldenrod;font-family: 'Times New Roman', Times, serif;">QADAMLOFT </span> <%-  report1data.line1 %></p>
+               <p><%-  report1data.line2 %></p>
+               <p><%-  report1data.line3 %></p>
+               <p style="color:palevioletred"><%-  report1data.line4 %></p> 
+
+               <p><span style="font-weight: bold; color: goldenrod;">  Примечание: </span>></span><%-  report1data.line5 %></p>
+               <p><span style="font-weight: bold;"> <%-  report1data.line6 %></span></p>
+               <p><%-  report1data.line9 %></p>
+               <p> <br/></p>
+               <p style="color:green"><%-  report1data.line7 %></p>
+               <p style="color:green">Адрес: <%-  report1data.line8 %></p>
+        </div>
+       <img src="<%- report1data.pic%>" style = "width: 550px;"/>              
+    </body>
+</html>
