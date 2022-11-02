@@ -63,7 +63,7 @@ router.get('/blank_zakaza',
                 // const ourwhatsapp = record.get("Our whatsapp");
                 // const clientwhatsapp = record.get("Client whatsapp");
                 // const weldewhatsapp = record.get("Welder whatsapp");
-                // const ourwhatsapp = '';
+                const ourwhatsapp = '';
                 const clientwhatsapp = record.get("Client whatsapp");
                 const weldewhatsapp = record.get("Welder whatsapp");
                 const comment1 = record.get("коммент");

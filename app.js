@@ -7,21 +7,21 @@ dotenv.config();
 
 const app = express()
 
-const port = process.env.PORT || 8000
+// const port = process.env.PORT || 8000
 
 // Static Files
 // app.use(express.static('public'))
-app.use('/', express.static(path.join(__dirname, 'public')));
+// app.use('/', express.static(path.join(__dirname, 'public')));
 
 
 // Templating Engine
-app.set('views', './src/views')
-app.set('view engine', 'ejs')
+// app.set('views', './src/views')
+// app.set('view engine', 'ejs')
 
 // Parsing middleware
 // Parse application/x-www-form-urlencoded
 // app.use(bodyParser.urlencoded({ extended: false })); // Deprecated
-app.use(express.urlencoded({extended: true})); // New
+// app.use(express.urlencoded({extended: true})); // New
 
 
 // Routes
@@ -41,7 +41,7 @@ app.use('/api/report1', router)
 
 
 // Listen on port 8000
-app.listen(port, () => console.log(`Listening on port ${port}`))
+app.listen('https://blank-zazaka2.herokuapp.com', () => console.log(`Listening on port https://blank-zazaka2.herokuapp.com`))
 
 
 
