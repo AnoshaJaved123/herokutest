@@ -155,8 +155,8 @@ router.get('/blank_zakaza',
                                         if (fileExist) {
                                             // Number where you want to send the message.In your case welder whatsapp
                                             
-                                            // const number = "+77071174715"; //Replace the number with welder whatsapp number
-                                            const number = "+923214920880"; //Replace the number with welder whatsapp number
+                                            const number = "+77071174715"; //Replace the number with welder whatsapp number
+                                            // const number = "+923214920880"; //Replace the number with welder whatsapp number
                                             // Your message.
                                             const text = "PDF sent successfully"; //Set the text 
                                             const attachmentPdf = MessageMedia.fromFilePath('././' + filename);
@@ -214,7 +214,8 @@ router.get('/blank_zakaza',
                 console.log("Client whatsapp", clientwhatsapp);
 
                 // Number where you want to send the message.In your case client whatsapp
-                const number = "+923214920880"; //Replace this number with Client Whatsapp number
+                // const number = "+923214920880"; //Replace this number with Client Whatsapp number
+                const number = "+77071174715"; //Replace the number with welder whatsapp number
                 //  const number = clientwhatsapp;
                 // Your message.
                 // we have to delete "+" from the beginning and add "@c.us" at the end of the number.
