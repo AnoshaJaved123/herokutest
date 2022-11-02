@@ -8,7 +8,7 @@ const port = process.env.PORT || 8000
 // app.use(express.urlencoded({extended: true})); // New
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
-app.use(express.static(__dirname + '/public'));
+// app.use(express.static(__dirname + '/public'));
 
 app.get("/", (req,res)=>{
     res.json("server start")
