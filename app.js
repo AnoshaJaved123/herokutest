@@ -1,12 +1,18 @@
+'use strict';
+
 const express = require('express')
 const bodyParser = require('body-parser')
+const dotenv = require("dotenv");
+
+dotenv.config();
 
 const app = express()
+
 const port = process.env.PORT || 8000
 
 // Static Files
 // app.use(express.static('public'))
-app.use('/', express.static(path.join(__dirname, 'public')));
+// app.use('/', express.static(path.join(__dirname, 'public')));
 
 
 // Templating Engine
@@ -21,7 +27,6 @@ app.use(express.urlencoded({extended: true})); // New
 
 // Routes
 
-const { env } = require('process')
 const router = require('./src/routes/report1')
 // const router2 = require('./src/routes/updateStatus')
 
