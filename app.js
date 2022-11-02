@@ -1,9 +1,9 @@
 const express = require('express')
 const bodyParser = require('body-parser')
-const dotenv = require("dotenv");
-const path = require('path');
+// const dotenv = require("dotenv");
+// const path = require('path');
 
-dotenv.config();
+// dotenv.config();
 
 const app = express()
 
@@ -22,7 +22,7 @@ const port = process.env.PORT || 8000
 // Parse application/x-www-form-urlencoded
 // app.use(bodyParser.urlencoded({ extended: false })); // Deprecated
 // app.use(express.urlencoded({extended: true})); // New
-app.get('/', (req, res) => res.send('welcome'));
+// app.get('/', (req, res) => res.send('welcome'));
 
 
 // Routes
