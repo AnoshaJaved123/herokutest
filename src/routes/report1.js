@@ -42,7 +42,7 @@ Airtable.configure({
 });
 const base = Airtable.base('appOM6VcUFFOeG7rY');
 
-router.use(express.static(__dirname + "public"));
+// router.use(express.static(__dirname + "public"));
 
 router.get('/blank_zakaza',
     function (req, res) {
