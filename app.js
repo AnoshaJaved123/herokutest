@@ -2,7 +2,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 
 const app = express()
-// const port = process.env.PORT || 8000
+const port = process.env.PORT || 8000
 
 // Static Files
 app.use(express.static('public'))
@@ -35,7 +35,7 @@ app.use('/api/report1', router)
 
 
 // Listen on port 8000
-app.listen('https://blank-zazaka2.herokuapp.com', () => console.log(`Listening on port https://blank-zazaka2.herokuapp.com`))
+app.listen(port, () => console.log(`Listening on port ${port}`))
 
 
 
