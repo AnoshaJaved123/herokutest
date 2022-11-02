@@ -1,8 +1,7 @@
-'use strict';
-
 const express = require('express')
 const bodyParser = require('body-parser')
 const dotenv = require("dotenv");
+const path = require('path');
 
 dotenv.config();
 
@@ -12,7 +11,7 @@ const port = process.env.PORT || 8000
 
 // Static Files
 // app.use(express.static('public'))
-// app.use('/', express.static(path.join(__dirname, 'public')));
+app.use('/', express.static(path.join(__dirname, 'public')));
 
 
 // Templating Engine
