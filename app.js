@@ -21,10 +21,11 @@ const port = process.env.PORT || 8000
 // Parsing middleware
 // Parse application/x-www-form-urlencoded
 // app.use(bodyParser.urlencoded({ extended: false })); // Deprecated
-// app.use(express.urlencoded({extended: true})); // New
-// app.get('/', (req, res) => res.send('welcome'));
+app.use(express.urlencoded({extended: true})); // New
 
-
+app.get("/", (req,res)=>{
+    res.json("server start")
+})
 // Routes
 
 const router = require('./src/routes/report1')
