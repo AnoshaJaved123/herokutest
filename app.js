@@ -5,15 +5,16 @@ const app = express()
 
 const port = process.env.PORT || 8000
 
-app.use(express.urlencoded({extended: true})); // New
-const router = require('./src/routes/report1')
+// app.use(express.urlencoded({extended: true})); // New
 
-app.get("/", (req,res)=>{
-    app.use('/api/report1', router)    
-})
+// app.get("/", (req,res)=>{
+//     res.json("server start")
+// })
 // Routes
 
+const router = require('./src/routes/report1')
 
+app.use('/api/report1', router)    
 
 // Listen on port 8000
 app.listen(port, () => console.log(`Listening on port ${port}`))
