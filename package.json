@@ -94,6 +94,7 @@
     "cookie-signature": "^1.0.6",
     "core-js": "^2.6.12",
     "core-util-is": "^1.0.3",
+    "cors": "^2.8.5",
     "country-regex": "^1.1.0",
     "crypto-js": "^4.1.1",
     "crypto-random-string": "^2.0.0",
